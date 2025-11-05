@@ -1,9 +1,10 @@
 import { Leaf, Home as HomeIcon, MapPin } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   return (
     <header className="relative overflow-hidden bg-gradient-to-b from-emerald-700 via-emerald-600 to-emerald-500 text-white">
-      <div className="absolute inset-0 opacity-20" aria-hidden>
+      <div className="pointer-events-none absolute inset-0 opacity-20" aria-hidden>
         <div className="absolute -top-24 -left-24 h-72 w-72 rounded-full bg-amber-700 blur-3xl" />
         <div className="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-lime-400 blur-3xl" />
       </div>
@@ -17,6 +18,7 @@ export default function Hero() {
         </div>
         <div className="hidden gap-6 md:flex">
           <a href="#amenities" className="text-white/90 transition hover:text-white">Amenities</a>
+          <a href="#racing" className="text-white/90 transition hover:text-white">RC Racing</a>
           <a href="#gallery" className="text-white/90 transition hover:text-white">Gallery</a>
           <a href="#contact" className="text-white/90 transition hover:text-white">Contact</a>
         </div>
@@ -61,11 +63,9 @@ export default function Hero() {
         </div>
 
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl ring-1 ring-white/20">
-          <img
-            src="https://images.unsplash.com/photo-1565241303223-69858d0382bd?q=80&w=1600&auto=format&fit=crop"
-            alt="Sunny farmhouse with greenery"
-            className="h-full w-full object-cover"
-            loading="eager"
+          <Spline
+            scene="https://prod.spline.design/8fw9Z-c-rqW3nWBN/scene.splinecode"
+            style={{ width: '100%', height: '100%' }}
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-emerald-900/20 via-transparent to-lime-300/10" />
         </div>
